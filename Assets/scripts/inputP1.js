@@ -4,6 +4,8 @@ var defaultSpeed = new float();
 defaultSpeed = 0.1;
 var maxHeight=4;
 var minHeight=-4;
+var keyUp = "up";
+var keyDown = "down";
 function Start () {
 
 }
@@ -13,12 +15,12 @@ function Update () {
 }	
 
 function onKeyDown(){
-	if (Input.GetKey("up")){
-		if (transform.position.y < 4){
+	if (Input.GetKey(keyUp)){
+		if (transform.position.y < 6){
 			transform.position += new Vector2(0f, defaultSpeed);
 		}
-	} else if (Input.GetKey("down")){
-		if (transform.position.y > -4){
+	} else if (Input.GetKey(keyDown)){
+		if (transform.position.y > -6){
 			transform.position -= new Vector2(0f, defaultSpeed);
 		}
 	}
