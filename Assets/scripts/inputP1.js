@@ -16,11 +16,11 @@ function Update () {
 
 function onKeyDown(){
 	if (Input.GetKey(keyUp)){
-		if (transform.position.y < 6){
+		if (transform.position.y < 4){
 			transform.position += new Vector2(0f, defaultSpeed);
 		}
 	} else if (Input.GetKey(keyDown)){
-		if (transform.position.y > -6){
+		if (transform.position.y > -4){
 			transform.position -= new Vector2(0f, defaultSpeed);
 		}
 	}
